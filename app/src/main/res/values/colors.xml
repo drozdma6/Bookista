@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#AB92BF</color>
+    <color name="splashScreenLavander">#FFAB92BF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="LoginBackground">#AB92BF</color>
+    <color name="ButtonEnabled">#655A7C</color>
+    <color name="ButtonDisabled">#7D6B8C</color>
+    <color name="BookItemsSeparatorLine">#D8D8D8</color>
+    <color name="HomeBookItemBackground">#FFFFFFFF</color>
+    <color name="BookDetailBackground">#FAA744</color>
+    <color name="BookDetailText">#8E8E8E</color>
+    <color name="RemoveButton">#FF7777</color>
+    <color name="SettingsTextColor">#1A1A1E</color>
+    <color name="SettingsImageColor">#46464F</color>
+    <color name="gray">#F6F6F6</color>
+    <color name="darkGray">#7A7A7A</color>
+</resources>

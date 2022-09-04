@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_book"
+        android:layout_width="100dp"
+        android:layout_height="155dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Bookista.book.image"
+        tools:background="@drawable/harry_potter" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/TextAppearance.Bookista.BookItem.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_book"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Harry Potter" />
+
+    <TextView
+        android:id="@+id/txt_author"
+        style="@style/TextAppearance.Bookista.BookItem.Subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_book"
+        app:layout_constraintTop_toBottomOf="@id/txt_name"
+        tools:text="J. K. Rowling." />
+
+    <ImageView
+        android:id="@+id/removeFromWishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_baseline_delete_forever_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toEndOf="@+id/img_book"
+        app:layout_constraintTop_toBottomOf="@+id/txt_author"
+        app:layout_constraintVertical_bias="0.82"
+        android:contentDescription="bin" />
+
+    <View
+        android:id="@+id/divider_header"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/BookItemsSeparatorLine"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

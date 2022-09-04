@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/book_detail_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        tools:src="@drawable/harry_potter"
+        app:shapeAppearance="@style/ShapeAppearance.Bookista.book.image"
+
+        >
+    </com.google.android.material.imageview.ShapeableImageView>
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image">
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/like_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_like_unselected"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        >
+    </ImageButton>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/add_to_bag_wrapper"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:background="@drawable/book_detail_text_background"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="30dp">
+            <TextView
+                android:id="@+id/txt_name"
+                style="@style/TextAppearance.Bookista.BookItem.Title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textSize="30sp"
+                tools:text="The Martian">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_author"
+                style="@style/TextAppearance.Bookista.BookItem.Subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Andy Weir"
+                app:layout_constraintTop_toBottomOf="@id/txt_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="5dp"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/txt_ABOUT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Bookista.BookDetailText"
+                android:textColor="@color/black"
+                android:text="@string/about"
+                app:layout_constraintTop_toBottomOf="@id/txt_author"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="15dp"
+
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/book_detail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.Bookista.BookDetailText"
+                app:layout_constraintTop_toBottomOf="@id/txt_ABOUT"
+                android:lineSpacingMultiplier="1.3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text = "There is a plot, Harry Potter. A plot to make most terrible things happen at Hogwarts School of Witchcraft and Wizardry this year.\n
+                Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone.... Dobby's sinister predictions seem to be coming true."
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_to_bag_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        android:background="@color/white"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_to_bag"
+            style="@style/ButtonStyle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/normal_button"
+            android:text="@string/add_to_bag" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
